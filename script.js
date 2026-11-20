@@ -29,6 +29,9 @@ function positionDeskPhotos() {
   const titleRight = bounds.left + (bounds.width - gap / 2) / 3;
   const titleBottom = bounds.top + bounds.height / 2;
   const inset = 4;
+  const isMobile = mobileDesk.matches;
+  const mobileColumnWidth = (bounds.width + gap) / 5;
+  const mobileRowOffsets = [-.23, .37, -.34, .13, .32, -.41, .22, -.12, .35];
 
   const offsets = deskPhotos.map((photo, index) => {
     if (!photo.isConnected) return null;
@@ -41,12 +44,16 @@ function positionDeskPhotos() {
     // Inline transforms do not affect the element's layout coordinates.
     const centerX = bounds.left + photo.offsetLeft + width / 2;
     const centerY = bounds.top + photo.offsetTop + height / 2;
-    const desiredX = centerX + Math.sin(index * 2.39 + .8) * Math.min(42, width * .23);
+    const scatterX = Math.sin(index * 2.39 + .8);
+    const rowOffset = mobileRowOffsets[Math.floor(index / 5)] ?? 0;
+    const desiredX = centerX + (isMobile
+      ? mobileColumnWidth * (rowOffset + scatterX * .22)
+      : scatterX * Math.min(42, width * .23));
     const desiredY = centerY + Math.sin(index * 1.71 + 1.4) * Math.min(38, height * .25);
 
     let left = bounds.left;
     let top = bounds.top;
-    if (!mobileDesk.matches) {
+    if (!isMobile) {
       if (centerX < titleRight) {
         top = titleBottom;
       } else if (desiredY - halfHeight < titleBottom) {
