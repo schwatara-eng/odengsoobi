@@ -389,6 +389,7 @@ html {
 
 .work-copy .note {
   margin: 0;
+  font-size: 75%;
   color: #fffaf0;
   line-height: 1.65;
 }
