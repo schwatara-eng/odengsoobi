@@ -1,6 +1,6 @@
 @font-face {
-  font-family: "OmuDaye";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-01@1.0/omyu_pretty.woff2") format("woff2");
+  font-family: "OksuniSNostalgicHandwriting";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/2607161334@griun-oksooni-rg/griun-oksooni-rg/Griun_Oksooni-Rg.woff2") format("woff2");
   font-weight: 400;
   font-display: swap;
 }
@@ -184,7 +184,7 @@
   transform: translate(-50%, 50%);
   overflow: hidden;
   color: #494039;
-  font: clamp(6px, 1.05cqh, 9px)/1.05 "OmuDaye", "Noto Serif KR", serif;
+  font: clamp(6px, 1.05cqh, 9px)/1.05 "OksuniSNostalgicHandwriting", "Noto Serif KR", serif;
   text-align: left;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -318,7 +318,7 @@
   contain: inline-size;
   padding: clamp(6px, 1.1vmin, 12px) 0;
   color: #494039;
-  font: 14px/1.5 "OmuDaye", "Noto Serif KR", serif;
+  font: 14px/1.5 "OksuniSNostalgicHandwriting", "Noto Serif KR", serif;
   text-align: left;
   overflow-wrap: anywhere;
 }
