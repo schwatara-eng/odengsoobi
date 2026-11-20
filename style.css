@@ -102,7 +102,7 @@
   --caption-space: clamp(9px, 2.2cqh, 23px);
   --row-height: calc((100cqh - (var(--rows) - 1) * var(--desk-gap)) / var(--rows));
   --image-height: max(1px, calc(var(--row-height) * 1.68 - var(--frame-edge) - var(--caption-space)));
-  --tilt: -5deg;
+  --tilt: -6deg;
   place-self: center;
   width: min(106%, 176px);
   min-width: 0;
@@ -116,19 +116,23 @@
 }
 
 .desk-photo:nth-child(3n + 1) {
-  --tilt: 7deg;
+  --tilt: 9deg;
 }
 
 .desk-photo:nth-child(4n + 2) {
-  --tilt: -9deg;
+  --tilt: -11deg;
 }
 
 .desk-photo:nth-child(5n + 3) {
-  --tilt: 4deg;
+  --tilt: 5deg;
 }
 
 .desk-photo:nth-child(7n + 4) {
-  --tilt: -2deg;
+  --tilt: -3deg;
+}
+
+.desk-photo:nth-child(11n + 6) {
+  --tilt: 12deg;
 }
 
 .desk-photo img {
