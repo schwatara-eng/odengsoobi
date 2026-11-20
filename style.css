@@ -287,7 +287,7 @@
   margin: 0;
   max-height: 100%;
   overflow: auto;
-  padding: var(--frame-padding);
+  padding: var(--frame-padding) var(--frame-padding) 0;
   background: #fffaf0;
   box-shadow: 0 14px 42px rgb(34 24 15 / 38%);
 }
@@ -316,9 +316,9 @@
 
 .modal-caption {
   contain: inline-size;
-  padding: clamp(6px, 1.1vmin, 12px) 0;
+  padding: clamp(10px, 1.5vmin, 16px) 0;
   color: #494039;
-  font: 14px/1.5 "OksuniSNostalgicHandwriting", "Noto Serif KR", serif;
+  font: 16px/1.5 "OksuniSNostalgicHandwriting", "Noto Serif KR", serif;
   text-align: left;
   overflow-wrap: anywhere;
 }
