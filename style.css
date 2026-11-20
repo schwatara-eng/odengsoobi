@@ -102,7 +102,7 @@
   --caption-space: clamp(9px, 2.2cqh, 23px);
   --row-height: calc((100cqh - (var(--rows) - 1) * var(--desk-gap)) / var(--rows));
   --image-height: max(1px, calc(var(--row-height) * 1.68 - var(--frame-edge) - var(--caption-space)));
-  --tilt: -6deg;
+  --tilt: 0deg;
   place-self: center;
   width: min(106%, 176px);
   min-width: 0;
@@ -115,24 +115,45 @@
   transform: translate(var(--photo-x, 0px), var(--photo-y, 0px)) rotate(var(--tilt));
 }
 
-.desk-photo:nth-child(3n + 1) {
-  --tilt: 9deg;
+/* Cycle through 11 angles so neighboring columns, rows and diagonals differ. */
+.desk-photo:nth-child(11n + 1) {
+  --tilt: -12deg;
 }
 
-.desk-photo:nth-child(4n + 2) {
-  --tilt: -11deg;
-}
-
-.desk-photo:nth-child(5n + 3) {
+.desk-photo:nth-child(11n + 2) {
   --tilt: 5deg;
 }
 
-.desk-photo:nth-child(7n + 4) {
-  --tilt: -3deg;
+.desk-photo:nth-child(11n + 3) {
+  --tilt: -5deg;
+}
+
+.desk-photo:nth-child(11n + 4) {
+  --tilt: 12deg;
 }
 
 .desk-photo:nth-child(11n + 6) {
-  --tilt: 12deg;
+  --tilt: -9deg;
+}
+
+.desk-photo:nth-child(11n + 7) {
+  --tilt: 8deg;
+}
+
+.desk-photo:nth-child(11n + 8) {
+  --tilt: -2deg;
+}
+
+.desk-photo:nth-child(11n + 9) {
+  --tilt: -7deg;
+}
+
+.desk-photo:nth-child(11n + 10) {
+  --tilt: 10deg;
+}
+
+.desk-photo:nth-child(11n) {
+  --tilt: 3deg;
 }
 
 .desk-photo img {
