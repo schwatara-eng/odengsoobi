@@ -1,0 +1,1 @@
+document.querySelectorAll('.play').forEach((button)=>{button.addEventListener('click',()=>{button.textContent=button.textContent==='▶'?'Ⅱ':'▶';});});
