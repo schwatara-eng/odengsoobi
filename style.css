@@ -336,6 +336,9 @@ html {
   min-height: 100vh;
   min-height: 100svh;
   padding: clamp(76px, 12svh, 120px) 7vw clamp(24px, 5svh, 56px);
+  background: linear-gradient(rgb(26 15 9 / 56%), rgb(26 15 9 / 56%)),
+    #806b52 url("images/desk-wood.webp") center / cover no-repeat;
+  color: #fffaf0;
 }
 
 .gallery {
@@ -348,14 +351,18 @@ html {
   gap: clamp(20px, 4svh, 42px) clamp(24px, 6vw, 100px);
 }
 
-.gallery .section-title {
-  grid-column: 1 / -1;
+.gallery .artwork-photo {
   display: block;
-  margin: 0;
-}
-
-.gallery .section-title h2 {
-  font-size: clamp(26px, 4vw, 52px);
+  justify-self: center;
+  max-width: 100%;
+  width: auto;
+  height: auto;
+  max-height: 75svh;
+  object-fit: contain;
+  padding: clamp(7px, 1.1vmin, 12px);
+  padding-bottom: clamp(15px, 2.5vmin, 26px);
+  background: #fffaf0;
+  box-shadow: 0 14px 42px rgb(34 24 15 / 38%);
 }
 
 .gallery .art {
@@ -371,6 +378,7 @@ html {
 
 .work-copy .number {
   margin: 0;
+  color: #f1e1d1;
 }
 
 .work-copy h2 {
@@ -381,6 +389,7 @@ html {
 
 .work-copy .note {
   margin: 0;
+  color: #fffaf0;
   line-height: 1.65;
 }
 
@@ -406,7 +415,7 @@ html {
 }
 
 .about .about-note {
-  color: #6d6861;
+  color: #fffaf0;
   line-height: 1.8;
 }
 
@@ -416,6 +425,7 @@ html {
 }
 
 .about footer {
+  color: #f1e1d1;
   margin: 0;
   padding: 16px 0 0;
 }
@@ -432,6 +442,10 @@ html {
 
   .gallery .art {
     width: min(56vw, 20svh);
+  }
+
+  .gallery .artwork-photo {
+    max-height: 36svh;
   }
 
   .gallery .work-copy {
