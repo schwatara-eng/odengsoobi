@@ -102,7 +102,9 @@
   --caption-space: clamp(9px, 2.2cqh, 23px);
   --row-height: calc((100cqh - (var(--rows) - 1) * var(--desk-gap)) / var(--rows));
   --image-height: max(1px, calc(var(--row-height) * 1.68 - var(--frame-edge) - var(--caption-space)));
+  --art-width: min(calc(100% - 2 * var(--frame-edge)), calc(var(--image-height) * var(--photo-ratio)));
   --tilt: 0deg;
+  position: relative;
   place-self: center;
   width: min(106%, 176px);
   min-width: 0;
@@ -159,12 +161,36 @@
 .desk-photo img {
   display: block;
   box-sizing: content-box;
-  width: min(calc(100% - 2 * var(--frame-edge)), calc(var(--image-height) * var(--photo-ratio)));
+  width: var(--art-width);
   height: auto;
   margin-inline: auto;
   padding: var(--frame-edge) var(--frame-edge) var(--caption-space);
   background: #fff;
   box-shadow: 0 4px 12px rgba(28, 18, 11, .35);
+}
+
+.desk-caption {
+  position: absolute;
+  bottom: calc(var(--caption-space) / 2);
+  left: 50%;
+  width: var(--art-width);
+  transform: translate(-50%, 50%);
+  overflow: hidden;
+  color: #494039;
+  font: 600 clamp(6px, 1.05cqh, 9px)/1.05 "Noto Serif KR", serif;
+  text-align: center;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@media (min-width: 761px) and (min-height: 900px) {
+  .desk-caption {
+    display: -webkit-box;
+    white-space: normal;
+    overflow-wrap: anywhere;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+  }
 }
 
 .desk-photo:hover,
@@ -237,7 +263,7 @@
 
   .desk-photo {
     --frame-edge: clamp(1.5px, .35cqh, 4px);
-    --caption-space: clamp(4px, 1.4cqh, 10px);
+    --caption-space: clamp(7px, 1.4cqh, 10px);
     --image-height: max(1px, calc(var(--row-height) * 1.08 - var(--frame-edge) - var(--caption-space)));
     width: 92%;
   }
@@ -292,7 +318,9 @@
   border-radius: 3px;
   background: #3e3025;
   color: #fffaf0;
-  font: 11px Arial, sans-serif;
+  max-width: min(86vw, 900px);
+  font: 14px/1.5 "Noto Serif KR", serif;
+  text-align: center;
   letter-spacing: .08em;
 }
 
