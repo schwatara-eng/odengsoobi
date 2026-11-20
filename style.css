@@ -37,3 +37,14 @@
   .p38{left:42%;top:45%}.p39{left:56%;top:62%}.p40{left:69%;top:45%}.p41{left:82%;top:62%}
   .p42{left:43%;top:77%}.p43{left:57%;top:79%}.p44{left:70%;top:77%}.p45{left:84%;top:79%}
 }
+/* Organic full-desk scatter: reserve only the upper-left copy block */
+@media(min-width:761px){
+  .desk-photo{width:clamp(115px,9.4vw,180px)}
+  .p01{left:33%;top:5%;--r:-7deg}.p02{left:45%;top:2%;--r:4deg}.p03{left:58%;top:7%;--r:-3deg}.p04{left:71%;top:3%;--r:7deg}.p05{left:84%;top:6%;--r:-5deg}.p06{left:94%;top:2%;--r:3deg}
+  .p07{left:36%;top:20%;--r:5deg}.p08{left:50%;top:17%;--r:-6deg}.p09{left:64%;top:22%;--r:3deg}.p10{left:78%;top:18%;--r:-4deg}.p11{left:91%;top:23%;--r:6deg}
+  .p12{left:31%;top:36%;--r:-4deg}.p13{left:44%;top:33%;--r:7deg}.p14{left:57%;top:39%;--r:-6deg}.p15{left:71%;top:34%;--r:4deg}.p16{left:85%;top:38%;--r:-3deg}.p17{left:95%;top:34%;--r:5deg}
+  .p18{left:4%;top:48%;--r:-6deg}.p19{left:17%;top:44%;--r:4deg}.p20{left:30%;top:52%;--r:-3deg}.p21{left:43%;top:48%;--r:6deg}.p22{left:56%;top:54%;--r:-5deg}.p23{left:69%;top:48%;--r:3deg}.p24{left:82%;top:53%;--r:-7deg}.p25{left:94%;top:49%;--r:4deg}
+  .p26{left:7%;top:65%;--r:5deg}.p27{left:20%;top:61%;--r:-4deg}.p28{left:34%;top:68%;--r:7deg}.p29{left:47%;top:63%;--r:-6deg}.p30{left:60%;top:69%;--r:3deg}.p31{left:74%;top:63%;--r:-4deg}.p32{left:87%;top:68%;--r:6deg}
+  .p33{left:2%;top:82%;--r:-5deg}.p34{left:15%;top:77%;--r:7deg}.p35{left:28%;top:84%;--r:-3deg}.p36{left:41%;top:79%;--r:5deg}.p37{left:54%;top:85%;--r:-7deg}.p38{left:67%;top:78%;--r:4deg}.p39{left:80%;top:84%;--r:-5deg}.p40{left:93%;top:79%;--r:6deg}
+  .p41{left:10%;top:92%;--r:4deg}.p42{left:29%;top:93%;--r:-6deg}.p43{left:49%;top:92%;--r:5deg}.p44{left:69%;top:93%;--r:-4deg}.p45{left:88%;top:92%;--r:7deg}
+}
