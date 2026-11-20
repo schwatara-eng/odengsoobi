@@ -3,3 +3,16 @@
 /* 37-piece desk collage expansion */
 .p20{left:2%;top:3%;--r:-5deg;--z:2}.p21{left:17%;top:5%;--r:7deg;--z:3}.p24{left:73%;top:2%;--r:-8deg;--z:5}.p26{right:-2%;top:19%;--r:5deg;--z:7}.p28{left:10%;top:22%;--r:4deg;--z:6}.p30{left:29%;top:17%;--r:-9deg;--z:5}.p31{left:45%;top:18%;--r:7deg;--z:4}.p32{left:65%;top:22%;--r:-5deg;--z:8}.p33{left:-3%;top:38%;--r:6deg;--z:7}.p34{left:16%;top:39%;--r:-4deg;--z:10}.p35{left:34%;top:43%;--r:8deg;--z:5}.p36{left:51%;top:40%;--r:-7deg;--z:9}.p37{left:72%;top:41%;--r:4deg;--z:6}.p40{right:-4%;top:42%;--r:-8deg;--z:8}.p41{left:1%;bottom:-7%;--r:-5deg;--z:6}.p42{left:25%;bottom:-10%;--r:8deg;--z:7}.p43{left:58%;bottom:-9%;--r:-4deg;--z:11}.p44{right:7%;bottom:-10%;--r:6deg;--z:9}
 @media(max-width:760px){.desk-hero{min-height:115vh}.desk-photo{width:25vw}.p12,.p13,.p14,.p15,.p16,.p17,.p18,.p19,.p20,.p21,.p24,.p26,.p28,.p30,.p31,.p32,.p33,.p34,.p35,.p36,.p37,.p40,.p41,.p42,.p43,.p44{display:block}.p20{left:2%;top:5%}.p21{left:72%;top:7%}.p24{left:10%;top:20%}.p26{left:42%;top:20%}.p28{right:-2%;top:23%}.p30{left:-3%;top:36%}.p31{left:30%;top:35%}.p32{right:2%;top:38%}.p33{left:4%;top:50%}.p34{left:38%;top:49%}.p35{right:-4%;top:52%}.p36{left:-2%;top:64%}.p37{left:30%;top:64%}.p40{right:1%;top:66%}.p41{left:5%;bottom:2%}.p42{left:38%;bottom:0}.p43{right:-3%;bottom:3%}.p44{left:67%;bottom:16%}}
+/* Keep the title clear: artwork lives on the right side of the desk */
+@media(min-width:761px){
+  .desk-title{width:30vw;pointer-events:none}
+  .desk-photo{width:clamp(105px,9.5vw,175px)}
+  .p01{left:35%;top:7%}.p02{left:48%;top:4%}.p03{left:61%;top:9%}.p04{left:75%;top:5%}.p05{left:89%;top:9%}
+  .p06{left:38%;top:25%}.p07{left:52%;top:22%}.p08{left:66%;top:26%}.p09{left:80%;top:23%}.p10{left:91%;top:28%}
+  .p11{left:34%;top:43%}.p12{left:47%;top:40%}.p13{left:60%;top:45%}.p14{left:74%;top:41%}.p15{left:88%;top:44%}
+  .p16{left:37%;top:61%}.p17{left:51%;top:58%}.p18{left:65%;top:63%}.p19{left:79%;top:59%}.p20{left:91%;top:64%}
+  .p21{left:34%;top:78%}.p24{left:47%;top:75%}.p26{left:60%;top:80%}.p28{left:73%;top:76%}.p30{left:87%;top:79%}
+  .p31{left:40%;top:12%}.p32{left:56%;top:32%}.p33{left:70%;top:15%}.p34{left:84%;top:34%}
+  .p35{left:43%;top:51%}.p36{left:57%;top:69%}.p37{left:70%;top:52%}.p40{left:84%;top:70%}
+  .p41{left:36%;bottom:-8%}.p42{left:53%;bottom:-10%}.p43{left:70%;bottom:-8%}.p44{left:86%;bottom:-10%}
+}
