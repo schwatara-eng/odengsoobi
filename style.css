@@ -24,3 +24,16 @@
 .p22,.p23,.p25,.p27,.p29,.p38,.p39,.p45{display:block}
 .p22{left:4%;top:13%;--r:-5deg}.p23{left:38%;top:12%;--r:6deg}.p25{right:-2%;top:14%;--r:-4deg}.p27{left:5%;top:29%;--r:5deg}.p29{left:39%;top:29%;--r:-7deg}.p38{right:-3%;top:31%;--r:4deg}.p39{left:15%;top:44%;--r:-5deg}.p45{right:5%;top:45%;--r:6deg}
 }
+/* Fill the full right-hand desk area evenly */
+@media(min-width:761px){
+  .desk-photo{width:clamp(125px,10.2vw,190px)}
+  .p01{left:34%;top:5%}.p02{left:46%;top:2%}.p03{left:58%;top:6%}.p04{left:70%;top:2%}.p05{left:82%;top:6%}.p06{left:92%;top:3%}
+  .p07{left:37%;top:20%}.p08{left:50%;top:18%}.p09{left:63%;top:21%}.p10{left:76%;top:18%}.p11{left:89%;top:22%}
+  .p12{left:34%;top:37%}.p13{left:46%;top:34%}.p14{left:59%;top:38%}.p15{left:72%;top:34%}.p16{left:85%;top:38%}.p17{left:94%;top:35%}
+  .p18{left:38%;top:53%}.p19{left:51%;top:51%}.p20{left:64%;top:55%}.p21{left:77%;top:51%}.p22{left:90%;top:54%}
+  .p23{left:34%;top:69%}.p24{left:46%;top:67%}.p25{left:59%;top:71%}.p26{left:72%;top:67%}.p27{left:85%;top:70%}.p28{left:94%;top:68%}
+  .p29{left:38%;top:84%}.p30{left:51%;top:82%}.p31{left:64%;top:86%}.p32{left:77%;top:82%}.p33{left:90%;top:85%}
+  .p34{left:41%;top:11%}.p35{left:55%;top:28%}.p36{left:68%;top:12%}.p37{left:81%;top:29%}
+  .p38{left:42%;top:45%}.p39{left:56%;top:62%}.p40{left:69%;top:45%}.p41{left:82%;top:62%}
+  .p42{left:43%;top:77%}.p43{left:57%;top:79%}.p44{left:70%;top:77%}.p45{left:84%;top:79%}
+}
