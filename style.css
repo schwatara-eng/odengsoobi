@@ -22,7 +22,7 @@
   min-height: 460px;
   padding: var(--header-space) var(--edge) var(--edge);
   overflow: hidden;
-  background: #806b52;
+  background: #806b52 url("images/desk-wood.webp") center / cover no-repeat;
 }
 
 .desk-hero::before {
@@ -30,9 +30,7 @@
   position: absolute;
   inset: 0;
   z-index: -1;
-  background:
-    radial-gradient(ellipse at 57% 34%, rgba(255, 240, 210, .23), transparent 64%),
-    repeating-linear-gradient(90deg, rgba(50, 25, 10, .035) 0 1px, transparent 1px 7px);
+  background: linear-gradient(90deg, rgb(26 15 9 / 34%), rgb(26 15 9 / 8%) 75%);
   pointer-events: none;
 }
 
