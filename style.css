@@ -274,8 +274,6 @@
   display: none;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
-  gap: 12px;
   background: rgb(44 34 25 / 48%);
   padding: 5vh 5vw;
 }
@@ -284,16 +282,21 @@
   display: flex;
 }
 
-.modal-image {
-  display: block;
-  min-height: 0;
-  max-width: min(86vw, 900px);
-  max-height: 82vh;
-  object-fit: contain;
-  padding: clamp(7px, 1.3vmin, 14px);
-  padding-bottom: clamp(23px, 5vmin, 50px);
+.modal-print {
+  --frame-padding: clamp(7px, 1.3vmin, 14px);
+  margin: 0;
+  max-height: 100%;
+  overflow: auto;
+  padding: var(--frame-padding);
   background: #fffaf0;
   box-shadow: 0 14px 42px rgb(34 24 15 / 38%);
+}
+
+.modal-image {
+  display: block;
+  max-width: calc(min(86vw, 900px) - 2 * var(--frame-padding));
+  max-height: calc(82svh - clamp(23px, 5vmin, 50px) - var(--frame-padding));
+  object-fit: contain;
 }
 
 .modal-close {
@@ -312,14 +315,12 @@
 }
 
 .modal-caption {
-  padding: 5px 9px;
-  border-radius: 3px;
-  background: #3e3025;
-  color: #fffaf0;
-  max-width: min(86vw, 900px);
+  contain: inline-size;
+  padding: clamp(6px, 1.1vmin, 12px) 0;
+  color: #494039;
   font: 14px/1.5 "OmuDaye", "Noto Serif KR", serif;
-  text-align: center;
-  letter-spacing: .08em;
+  text-align: left;
+  overflow-wrap: anywhere;
 }
 
 /* Fit each gallery chapter to one screen, with room to grow for longer content. */
