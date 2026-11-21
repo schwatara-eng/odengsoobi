@@ -527,6 +527,17 @@ body::after {
   letter-spacing: 0;
 }
 
+.page-jump a span {
+  display: block;
+  font-size: 15px;
+  line-height: 1;
+  transform: rotate(90deg);
+}
+
+.page-jump a[href="#site-end"] span {
+  transform: rotate(-90deg);
+}
+
 .page-jump a:hover,
 .page-jump a:focus-visible {
   background: #fffaf0;
