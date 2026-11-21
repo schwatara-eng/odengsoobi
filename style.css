@@ -367,18 +367,42 @@ html {
   color: #f1e1d1;
 }
 
-.gallery .artwork-photo {
+.gallery .gallery-photo {
   display: block;
   justify-self: center;
+  min-width: 0;
+  max-width: 100%;
+  padding: clamp(7px, 1.1vmin, 12px);
+  border: 0;
+  background: #fffaf0;
+  box-shadow: 0 14px 42px rgb(34 24 15 / 38%);
+  cursor: zoom-in;
+}
+
+.gallery-photo:focus-visible {
+  outline: 2px solid #fffaf0;
+  outline-offset: 4px;
+}
+
+.gallery .artwork-photo {
+  display: block;
   max-width: 100%;
   width: auto;
   height: auto;
-  max-height: 75svh;
+  max-height: 72svh;
   object-fit: contain;
-  padding: clamp(7px, 1.1vmin, 12px);
-  padding-bottom: clamp(15px, 2.5vmin, 26px);
-  background: #fffaf0;
-  box-shadow: 0 14px 42px rgb(34 24 15 / 38%);
+}
+
+.gallery-photo-caption {
+  display: block;
+  contain: inline-size;
+  margin-top: 6px;
+  color: #494039;
+  font: 14px/1.4 "OksuniSNostalgicHandwriting", "Noto Serif KR", serif;
+  text-align: left;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .gallery .art {
