@@ -502,3 +502,31 @@ body::after {
     linear-gradient(to right, rgb(0 0 0 / 28%), transparent 20%),
     linear-gradient(to left, rgb(0 0 0 / 28%), transparent 20%);
 }
+
+.page-jump {
+  position: fixed;
+  z-index: 9;
+  bottom: calc(10px + env(safe-area-inset-bottom, 0px));
+  left: calc(10px + env(safe-area-inset-left, 0px));
+  display: flex;
+  gap: 6px;
+}
+
+.page-jump a {
+  display: grid;
+  place-items: center;
+  min-height: 32px;
+  padding: 0 9px;
+  border: 1px solid rgb(255 250 240 / 40%);
+  border-radius: 5px;
+  background: rgb(27 17 11 / 86%);
+  color: #fffaf0;
+  font: 11px/1.15 system-ui, sans-serif;
+  letter-spacing: 0;
+}
+
+.page-jump a:hover,
+.page-jump a:focus-visible {
+  background: #fffaf0;
+  color: #2d1d13;
+}
