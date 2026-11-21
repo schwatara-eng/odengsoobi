@@ -2,8 +2,16 @@ document.querySelectorAll('.play').forEach((button)=>{button.addEventListener('c
 const modal=document.getElementById('artModal'),modalImg=modal?.querySelector('.modal-image'),caption=modal?.querySelector('.modal-caption');
 document.querySelectorAll('.desk-photo, .gallery-photo').forEach((photo) => {
   photo.addEventListener('click', () => {
+    const image = photo.querySelector('img');
+    const width = Number(image.getAttribute('width'));
+    const height = Number(image.getAttribute('height'));
+    if (width > 0 && height > 0) {
+      modal.style.setProperty('--modal-photo-ratio', width / height);
+    } else {
+      modal.style.removeProperty('--modal-photo-ratio');
+    }
     modalImg.src = photo.dataset.full;
-    modalImg.alt = photo.querySelector('img').alt;
+    modalImg.alt = image.alt;
     caption.textContent = document.getElementById(photo.getAttribute('aria-describedby')).textContent;
     modal.classList.add('open');
     modal.setAttribute('aria-hidden', 'false');
