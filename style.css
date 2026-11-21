@@ -509,16 +509,18 @@ body::after {
   bottom: calc(10px + env(safe-area-inset-bottom, 0px));
   left: calc(10px + env(safe-area-inset-left, 0px));
   display: flex;
+  flex-direction: column;
   gap: 6px;
 }
 
 .page-jump a {
   display: grid;
   place-items: center;
-  min-height: 32px;
-  padding: 0 9px;
+  width: 34px;
+  height: 34px;
+  padding: 0;
   border: 1px solid rgb(255 250 240 / 40%);
-  border-radius: 5px;
+  border-radius: 50%;
   background: rgb(27 17 11 / 86%);
   color: #fffaf0;
   font: 11px/1.15 system-ui, sans-serif;
