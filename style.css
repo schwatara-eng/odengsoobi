@@ -352,6 +352,21 @@ html {
   gap: clamp(20px, 4svh, 42px) clamp(24px, 6vw, 100px);
 }
 
+.gallery .work.photo-only {
+  grid-template-columns: minmax(0, 1fr);
+  justify-items: center;
+  gap: 14px;
+}
+
+.gallery .photo-only .artwork-photo {
+  max-height: 68svh;
+}
+
+.gallery .photo-only .number {
+  margin: 0;
+  color: #f1e1d1;
+}
+
 .gallery .artwork-photo {
   display: block;
   justify-self: center;
