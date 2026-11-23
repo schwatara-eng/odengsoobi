@@ -574,12 +574,35 @@ body::after {
   place-items: center;
 }
 
-.gallery-playback {
+.gallery-playback-bar {
   position: fixed;
-  padding: 0;
   right: calc(10px + env(safe-area-inset-right, 0px));
   bottom: calc(10px + env(safe-area-inset-bottom, 0px));
   z-index: 9;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  max-width: min(75vw, 420px);
+}
+
+.gallery-track:empty {
+  display: none;
+}
+
+.gallery-track {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  padding: 6px 10px;
+  border-radius: 14px;
+  background: rgb(27 17 11 / 90%);
+  color: #fffaf0;
+  font-size: 13px;
+}
+
+.gallery-playback {
+  flex: none;
+  padding: 0;
   width: 44px;
   height: 44px;
   border: 1px solid rgb(255 250 240 / 50%);

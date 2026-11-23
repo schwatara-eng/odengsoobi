@@ -89,6 +89,7 @@ if (desk) {
 }
 
 const galleryPlayback = document.querySelector('.gallery-playback');
+const galleryTrack = document.querySelector('.gallery-track');
 const galleryVideos = document.querySelectorAll('.gallery iframe[src^="https://www.youtube.com/embed/"]');
 let activeGalleryPlayer;
 
@@ -102,6 +103,10 @@ if (galleryPlayback && galleryVideos.length) {
             if (data === states.PLAYING && target !== activeGalleryPlayer) {
               const previousPlayer = activeGalleryPlayer;
               activeGalleryPlayer = target;
+              const heading = video.closest('article')?.querySelector('h2');
+              const title = heading?.innerText.replace(/\s+/g, ' ').trim() || video.title.replace(/ — 연결 영상$/, '');
+              galleryTrack.textContent = `♬ ${title}`;
+              galleryTrack.title = title;
               previousPlayer?.pauseVideo();
             }
 
