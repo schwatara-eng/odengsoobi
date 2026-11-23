@@ -108,7 +108,7 @@ if (galleryPlayback && galleryVideos.length) {
             if (target !== activeGalleryPlayer) return;
             const playing = data === states.PLAYING || data === states.BUFFERING;
             galleryPlayback.hidden = false;
-            galleryPlayback.textContent = playing ? 'Ⅱ' : '▶';
+            galleryPlayback.toggleAttribute('data-playing', playing);
             galleryPlayback.setAttribute('aria-label', playing ? '영상 일시정지' : '영상 재생');
           },
         },

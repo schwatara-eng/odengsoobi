@@ -569,8 +569,14 @@ body::after {
   color: #2d1d13;
 }
 
+.gallery-playback:not([hidden]) {
+  display: grid;
+  place-items: center;
+}
+
 .gallery-playback {
   position: fixed;
+  padding: 0;
   right: calc(10px + env(safe-area-inset-right, 0px));
   bottom: calc(10px + env(safe-area-inset-bottom, 0px));
   z-index: 9;
@@ -587,4 +593,18 @@ body::after {
 .gallery-playback:focus-visible {
   outline: 2px solid #fffaf0;
   outline-offset: 3px;
+}
+
+.gallery-playback::before {
+  content: "";
+  width: 13px;
+  height: 14px;
+  background: currentColor;
+  clip-path: polygon(0 0, 100% 50%, 0 100%);
+}
+
+.gallery-playback[data-playing]::before {
+  width: 10px;
+  background: linear-gradient(to right, currentColor 0 30%, transparent 30% 70%, currentColor 70% 100%);
+  clip-path: none;
 }
