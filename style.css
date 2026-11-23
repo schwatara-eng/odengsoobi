@@ -604,7 +604,10 @@ body::after {
 }
 
 .gallery-playback[data-playing]::before {
-  width: 10px;
-  background: linear-gradient(to right, currentColor 0 30%, transparent 30% 70%, currentColor 70% 100%);
+  content: "∥";
+  width: auto;
+  height: auto;
+  background: none;
   clip-path: none;
+  font: 20px/1 Arial, sans-serif;
 }
