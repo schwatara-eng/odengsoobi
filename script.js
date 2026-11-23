@@ -87,3 +87,46 @@ if (desk) {
   deskPhotos.forEach((photo) => deskObserver.observe(photo));
   mobileDesk.addEventListener('change', positionDeskPhotos);
 }
+
+const galleryPlayback = document.querySelector('.gallery-playback');
+const galleryVideos = document.querySelectorAll('.gallery iframe[src^="https://www.youtube.com/embed/"]');
+let activeGalleryPlayer;
+
+if (galleryPlayback && galleryVideos.length) {
+  window.onYouTubeIframeAPIReady = () => {
+    galleryVideos.forEach((video) => {
+      new window.YT.Player(video, {
+        events: {
+          onStateChange({ target, data }) {
+            const states = window.YT.PlayerState;
+            if (data === states.PLAYING && target !== activeGalleryPlayer) {
+              const previousPlayer = activeGalleryPlayer;
+              activeGalleryPlayer = target;
+              previousPlayer?.pauseVideo();
+            }
+
+            if (target !== activeGalleryPlayer) return;
+            const playing = data === states.PLAYING || data === states.BUFFERING;
+            galleryPlayback.hidden = false;
+            galleryPlayback.textContent = playing ? 'Ⅱ' : '▶';
+            galleryPlayback.setAttribute('aria-label', playing ? '영상 일시정지' : '영상 재생');
+          },
+        },
+      });
+    });
+  };
+
+  galleryPlayback.addEventListener('click', () => {
+    if (!activeGalleryPlayer) return;
+    const state = activeGalleryPlayer.getPlayerState();
+    if (state === window.YT.PlayerState.PLAYING || state === window.YT.PlayerState.BUFFERING) {
+      activeGalleryPlayer.pauseVideo();
+    } else {
+      activeGalleryPlayer.playVideo();
+    }
+  });
+
+  const youtubeApi = document.createElement('script');
+  youtubeApi.src = 'https://www.youtube.com/iframe_api';
+  document.head.append(youtubeApi);
+}

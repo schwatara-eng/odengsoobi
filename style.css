@@ -568,3 +568,23 @@ body::after {
   background: #fffaf0;
   color: #2d1d13;
 }
+
+.gallery-playback {
+  position: fixed;
+  right: calc(10px + env(safe-area-inset-right, 0px));
+  bottom: calc(10px + env(safe-area-inset-bottom, 0px));
+  z-index: 9;
+  width: 44px;
+  height: 44px;
+  border: 1px solid rgb(255 250 240 / 50%);
+  border-radius: 50%;
+  background: rgb(27 17 11 / 90%);
+  color: #fffaf0;
+  font: 17px/1 system-ui, sans-serif;
+  cursor: pointer;
+}
+
+.gallery-playback:focus-visible {
+  outline: 2px solid #fffaf0;
+  outline-offset: 3px;
+}
